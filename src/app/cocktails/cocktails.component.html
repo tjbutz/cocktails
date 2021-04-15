@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>ingredients</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cocktail of cocktails">
+                <td>
+                    {{cocktail.idDrink}}
+                </td>
+                <td>
+                    {{cocktail.strDrink}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
