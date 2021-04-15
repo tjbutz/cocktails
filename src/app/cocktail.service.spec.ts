@@ -1,6 +1,3 @@
-import { TestBed } from '@angular/core/testing';
-import { CocktailResponse } from './cocktail.model';
-
 import { CocktailService } from './cocktail.service';
 let httpClientSpy: { get: jasmine.Spy };
 

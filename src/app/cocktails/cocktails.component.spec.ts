@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CocktailService } from '../cocktail.service';
 
 import { CocktailsComponent } from './cocktails.component';
 
@@ -27,6 +28,6 @@ describe('CocktailsComponent', () => {
   //   const fixture = TestBed.createComponent(CocktailsComponent);
   //   fixture.detectChanges();
   //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('p').textContent).toContain('cocktails works!');
+  //   expect(compiled.querySelector('p').textContent).toContain('Cocktail List');
   // });
 });
