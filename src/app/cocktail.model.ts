@@ -21,5 +21,5 @@ export class Cocktail {
     strIngredient12: string
     strIngredient13: string
     strIngredient14: string 
-    strIngredient15: string 
+    strIngredient15: string
 }

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CocktailService } from '../cocktail.service';
 
@@ -9,7 +10,9 @@ describe('CocktailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CocktailsComponent ]
+      imports : [ HttpClientModule ],
+      declarations: [ CocktailsComponent ],
+      providers: [ CocktailService ]
     })
     .compileComponents();
   });
@@ -20,14 +23,15 @@ describe('CocktailsComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(CocktailsComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('p').textContent).toContain('Cocktail List');
-  // });
+  it('should render table', () => {
+    const fixture = TestBed.createComponent(CocktailsComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('table').textContent).toBeDefined();
+    expect(compiled.querySelectorAll('table thead tr td').length).toBe(2);
+  });
 });
