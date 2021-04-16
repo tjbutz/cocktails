@@ -15,7 +15,7 @@ export class CocktailsComponent implements OnInit {
   cocktails: Cocktail[]
 
   ngOnInit(): void {
-    var obs = this.cocktailService.GetRecipies("margarita")
+    var obs = this.cocktailService.getRecipies("margarita")
     obs.subscribe(data => {
       console.log(data)
       this.cocktails = data.drinks

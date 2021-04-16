@@ -10,7 +10,7 @@ export class CocktailService {
 
   constructor(private http: HttpClient) { }
 
-  GetRecipies(searchTerm:string) : Observable<CocktailResponse> {
+  getRecipies(searchTerm:string) : Observable<CocktailResponse> {
     return this.http.get<CocktailResponse>(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)
   }
 }
