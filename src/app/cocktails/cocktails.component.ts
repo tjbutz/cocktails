@@ -12,13 +12,17 @@ export class CocktailsComponent implements OnInit {
 
   constructor( private cocktailService:CocktailService) { }
 
-  cocktails: Cocktail[]
+  cocktails: Cocktail[];
+
+  dataSource: null;
+
+  displayedColumns: string[] = ['name', 'ingredients'];
 
   ngOnInit(): void {
     var obs = this.cocktailService.getRecipies("margarita")
     obs.subscribe(data => {
       console.log(data)
-      this.cocktails = data.drinks
+      this.cocktails = data.drinks;
       console.log(data.drinks)
     },(err) => {
       console.log("Error:", err);
@@ -38,5 +42,9 @@ export class CocktailsComponent implements OnInit {
       console.log(item)
     }
     return ingredients.join(",")
+  }
+
+  onClick(item: Cocktail): void {
+
   }
 }

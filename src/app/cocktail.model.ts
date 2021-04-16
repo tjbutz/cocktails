@@ -1,10 +1,10 @@
 
 
-export class CocktailResponse {
+export interface CocktailResponse {
     drinks: Cocktail[]
 }
 
-export class Cocktail {
+export interface Cocktail {
     idDrink: string
     strDrink: string
     strIngredient1: string
@@ -22,4 +22,5 @@ export class Cocktail {
     strIngredient13: string
     strIngredient14: string 
     strIngredient15: string
+    strDrinkThumb:string
 }

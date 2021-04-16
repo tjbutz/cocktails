@@ -1,20 +1,21 @@
-<div>
-    <table>
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Ingredients</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let cocktail of cocktails">
-                <td>
-                    {{cocktail.strDrink}}
-                </td>
-                <td>
-                    {{ getIngredientsList(cocktail)}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table mat-table [dataSource]="cocktails" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let cocktail" routerLink="/cocktails/{{cocktail.idDrink}}"> {{cocktail.strDrink}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="ingredients">
+      <th mat-header-cell *matHeaderCellDef>Ingredients</th>-
+      <td mat-cell *matCellDef="let cocktail" routerLink="/cocktails/{{cocktail.idDrink}}"> {{ getIngredientsList(cocktail)}} </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

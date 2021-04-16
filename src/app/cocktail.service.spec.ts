@@ -37,6 +37,7 @@ describe('CocktailService', () => {
           strIngredient13: null,
           strIngredient14: null,
           strIngredient15: null,
+          strDrinkThumb : ""
         },
         {
           idDrink: "2",
@@ -55,7 +56,8 @@ describe('CocktailService', () => {
           strIngredient12: null,
           strIngredient13: null,
           strIngredient14: null,
-          strIngredient15: null
+          strIngredient15: null,
+          strDrinkThumb:""
         },
       ]
     };
