@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Task
+Extend example application which can be found at: https://github.com/nexus49/cocktails
+This current app lists a number of cocktail recipies and their ingredients.
+Implement the following tasks:
+- Improve UI design by adding https://material.angular.io
+- Add a detail view to display data of a single cocktail
+- On the detail page display the image and the instructions of selected cocktail
+- Add additional tests where needed
+- Improve data model by transforming ingredients attributes into a ingredients array.
+Please consider the following guidelines:
+- Use Angular
+- Apply TDD where ever appropriate
+- the data for this page can be retrieved from: 
+  - List of cocktails `http://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`
+  - A single Cocktail `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007`
+Tips:
+- Share your thinking process, what needs to be done
+- Feel free to use google in case of doubts :-)
