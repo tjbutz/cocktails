@@ -30,11 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Extend example application which can be found at: https://github.com/nexus49/cocktails
 This current app lists a number of cocktail recipies and their ingredients.
 Implement the following tasks:
-- Improve UI design by adding https://material.angular.io
 - Add a detail view to display data of a single cocktail
 - On the detail page display the image and the instructions of selected cocktail
 - Add additional tests where needed
 - Improve data model by transforming ingredients attributes into a ingredients array.
+- Improve UI design by adding https://material.angular.io for the table
 Please consider the following guidelines:
 - Use Angular
 - Apply TDD where ever appropriate
