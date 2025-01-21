@@ -3,9 +3,10 @@ import { Cocktail } from '../cocktail.model';
 import { CocktailService } from '../cocktail.service';
 
 @Component({
-  selector: 'app-cocktails',
-  templateUrl: './cocktails.component.html',
-  styleUrls: ['./cocktails.component.css']
+    selector: 'app-cocktails',
+    templateUrl: './cocktails.component.html',
+    styleUrls: ['./cocktails.component.css'],
+    standalone: false
 })
 export class CocktailsComponent implements OnInit {
 
