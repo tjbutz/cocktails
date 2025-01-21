@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CocktailService } from '../cocktail.service';
 
@@ -10,10 +10,10 @@ describe('CocktailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [ HttpClientModule ],
-      declarations: [ CocktailsComponent ],
-      providers: [ CocktailService ]
-    })
+    declarations: [CocktailsComponent],
+    imports: [],
+    providers: [CocktailService, provideHttpClient(withInterceptorsFromDi())]
+})
     .compileComponents();
   });
 
