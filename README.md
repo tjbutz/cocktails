@@ -33,7 +33,6 @@ Implement the following tasks:
 - Add a detail view to display data of a single cocktail
 - On the detail page display the image and the instructions of selected cocktail
 - Improve data model by transforming ingredients attributes into a ingredients array.
-- Improve UI design by adding https://material.angular.io for the table
 Please consider the following guidelines:
 - Use Angular
 - the data for this page can be retrieved from: 
